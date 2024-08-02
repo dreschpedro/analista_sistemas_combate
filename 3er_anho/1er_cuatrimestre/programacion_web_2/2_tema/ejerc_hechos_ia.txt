@@ -1,0 +1,83 @@
+// 1
+const ciudad = {};
+const persona = {
+    nombre: 'Pablo',
+    apellido: 'González',
+    edad: 30,
+    cuil: '20-12345678-5',
+};
+persona.domicilio = 'Calle Falsa 123';
+persona.telefono = '555-1234';
+delete persona.nombre;
+console.log(persona);
+
+// 2
+const { nombre, apellido, telefono } = persona;
+console.log(`Nombre: ${nombre}, Apellido: ${apellido}, Teléfono: ${telefono}`);
+
+// 3
+const proveedor = {
+    nombre: 'Proveedor 1',
+    direccion: 'Calle Falsa 123',
+};
+const ciudad2 = {
+    nombre: 'Ciudad 2',
+    provincia: 'Provincia 2',
+};
+const resultado1 = Object.assign(proveedor, ciudad2);
+console.log(resultado1);
+const resultado2 = { ...proveedor, ...ciudad2 };
+console.log(resultado2);
+
+// 4
+function Producto(codigo, nombre, precio, categoria) {
+    this.codigo = codigo;
+    this.nombre = nombre;
+    this.precio = precio;
+    this.categoria = categoria;
+}
+const producto1 = new Producto(1, 'Leche', 50, 'Lácteos');
+const producto2 = new Producto(2, 'Jabón', 30, 'Limpieza');
+const producto3 = new Producto(3, 'Agua', 20, 'Bebidas');
+producto1.precio = 60;
+producto2.cantidad = 10;
+producto3.marca = 'Marca';
+console.log(producto1);
+console.log(producto2);
+console.log(producto3);
+
+// 5
+const departamentos = [
+    {
+        codigo: 1,
+        superficie: 50,
+        precioAlquiler: 1000,
+        disponible: true,
+    },
+    {
+        codigo: 2,
+        superficie: 70,
+        precioAlquiler: 1500,
+        disponible: false,
+    },
+    {
+        codigo: 3,
+        superficie: 80,
+        precioAlquiler: 2000,
+        disponible: true,
+    },
+];
+function cancelarContrato(codigo) {
+    const departamento = departamentos.find((d) => d.codigo === codigo);
+    departamento.disponible = !departamento.disponible;
+    departamento.precioAlquiler *= departamento.disponible ? 1.12 : (1 / 1.12);
+}
+cancelarContrato(1);
+console.log(departamentos);
+
+// 6.
+Object.seal(departamentos[0]);
+Object.freeze(departamentos[1]);
+console.log(Object.keys(departamentos[0]));
+console.log(Object.values(departamentos[0]));
+console.log(Object.entries(departamentos[0]));;

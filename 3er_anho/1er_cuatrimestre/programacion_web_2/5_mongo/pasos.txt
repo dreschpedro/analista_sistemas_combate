@@ -1,0 +1,36 @@
+Usar terminal bash para crear carpetas y archivos con…
+mkdir -p Controllers Routers Models Config
+touch index.js .env
+
+1 - instalar librerias
+   * npm init
+   * npm i express mongoose dotenv --save
+   * npm i nodemon
+ 
+2 - crear estructura del proyecto
+   * carpetas:
+    -> controllers   (va la lógica en si)
+    -> models
+    -> routers    (maneja las rutas exportadas del controlador)
+  -> config: contiene la coneccion a la DB, entre otros
+  
+* archivos:
+index.js, .env
+   *iniciar estructura basica del proyecto express
+ 
+3 - routers / controllers
+   * por cada Coleccion, se crea un archivo
+  	por ej:  usuarios -> Controllers/usuarioController.js
+                    	              -> Router/usuarioRouter.js
+            	productos -> Controllers/productoController.js
+                     	    -> Router/productoRouter.js
+ 4 - Lógica
+   * dentro de /controllers se crea la lógica de cada ruta y se exporta
+   * dentro de /routers
+       -> importar express y la lógica creada en /controllers
+        -> crear router: //const router = express.Router();
+        -> configurar los verbos (get, post y put)
+        -> exportar router
+   *dentro de index.js
+  
+

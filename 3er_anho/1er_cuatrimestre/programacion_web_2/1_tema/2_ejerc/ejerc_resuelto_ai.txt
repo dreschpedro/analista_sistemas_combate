@@ -1,0 +1,49 @@
+// 1.
+    const costo = 200000;
+    const descuento = costo > 150000 ? costo * 0.05 : 0;
+    console.log(`El descuento es de ${descuento}`);
+
+    // 2.
+    const numero = 7;
+    let esPrimo = true;
+
+    for (let i = 2; i < numero; i++) {
+        if (numero % i === 0) {
+            esPrimo = false;
+            break;
+        }
+    }
+
+    console.log(esPrimo ? `${numero} es un número primo` : `${numero} no es un número primo`);
+
+    // 3.
+    const notas = [4.5, 3.5, 4.0, 3.0, 5.0];
+    const promedio = notas.reduce((a, b) => a + b) / notas.length;
+    console.log(promedio > 3.5 ? 'El estudiante ganó el curso' : 'El estudiante perdió el curso');
+
+    // 4.
+    const num1 = 10;
+    const num2 = 2;
+    console.log(num1 % num2 === 0 ? `${num2} es divisor de ${num1} ` : `${num2} no es divisor de ${num1} `);
+
+    // 5.
+    const angulo = 90;
+    if (angulo < 90) {
+        console.log('El ángulo es agudo');
+    } else if (angulo > 90) {
+        console.log('El ángulo es obtuso');
+    } else {
+        console.log('El ángulo es recto');
+    }
+
+    // 6.
+    const sexo = 'mujer';
+    const estatura = 1.70;
+    const edad = 22;
+    const estadoCivil = 'soltero';
+
+    if ((sexo === 'mujer' && estatura > 1.6 && edad >= 20 && edad <= 25 && estadoCivil === 'soltero') || (sexo === 'hombre' && estatura > 1.65 && edad >= 18 && edad <= 24 && estadoCivil === 'soltero')) {
+        console.log('El aspirante es apto para ingresar al ejército');
+    } else {
+        console.log('El aspirante no es apto para ingresar al ejército');
+    };

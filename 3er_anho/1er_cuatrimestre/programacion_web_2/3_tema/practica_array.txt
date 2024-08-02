@@ -1,0 +1,70 @@
+
+Operaciones con Array
+
+En JavaScript es posible crear array con elementos de diferente tipo, teniendo en cuenta que este lenguaje es dinámico.
+Por ejemplo 
+const carrito = [
+        ["Monitor", 500, true],
+        ["Mouse", 50, true],
+        ["Celular LG", 10000, false]
+     ];
+
+JavaScript dispone de una serie de métodos que permiten realizar una serie de operaciones de una manera mucho más sencilla que en otros lenguajes.
+Métodos que permiten agregar o eliminar elementos del array en Javascript
+	push(): permite agregar elementos al final de un array, sin ser necesario saber cantidad de elementos del array.
+	Ejemplo:
+	const valores = [ 15,25,36,19];
+	valores.push(36); // agrega el número 36 al final del array.
+	pop (): Elimina el último elemento de un array y lo devuelve.
+	shift(): Elimina el primer elemento del array y lo retorna.
+	unshift(): Agrega uno o más elementos al inicio del array.
+	splice(): El método splice() cambia el contenido de un array eliminando elementos existentes y/o agregando nuevos elementos. 
+                   
+ Acepta tres parámetros:
+•	índice donde se comenzará a cambiar el array.
+•	un entero indicando el número de elementos a eliminar.
+•	los elementos que se añadirán al array empezando en el índice indicado en el primer parámetro.
+
+
+Método para recorrer un array 
+	forEach(): Es la versión moderna del bucle for, con una sintaxis más sencilla.
+array.forEach( (element,i) => {
+console.log( `El producto es ${array[i][0]} y el indice es ${i}` );
+});
+
+	map(): Es similar a forEach, también tiene una sintaxis sencilla, con la diferencia que permite generar otro array.
+array.map( function (element,i) {
+console.log( `El producto es ${array[i][0]} y el indice es ${i}` );
+});
+
+
+ 
+Práctica 
+
+1.	Crear un array con 10 números enteros, y agregarle al final 3 números decimales utilizando push(), 2 negativos al comienzo utilizando unshift().
+2.	Crear un array con datos (con 10 elementos) de cada uno de los alumnos de una institución educativa se tienen los siguientes datos:   Nº de matrícula, Nombre, Apellido, Domicilio, Edad, Carrera, regularidad (dato tipo boolean).  Sabiendo que las carreras pueden ser (Tecnicatura Superior Analista Sistemas y Tecnicatura en Criminalistica)
+•	Agregar 4 alumnos con método push().
+•	Recorrer el array con forEach() para mostrar el listado de alumnos de la institución
+•	Listar todos los alumnos de la carrera Tecnicatura Superior en Analista Sitemas.
+
+3.	Crear un array con 10 productos del supermercado, con los siguientes datos:  Código artículo, nombre, precio, categoría (lácteos, limpieza, bebidas).
+•	cambia el contenido de un array eliminando elementos existentes y/o agregando nuevos elementos con método splice().
+•	Listar el array resultante 
+   
+4.	Una inmobiliaria tiene información sobre 3 departamentos en alquiler, de cada inmueble se conoce:
+•	Código del inmueble (número entero)
+•	Superficie (número entero)
+•	Precio del alquiler (número decimal)
+•	Disponibilidad (booleano)
+Cuando un inquilino desea cancelar su contrato se debe modificar la disponibilidad del inmueble. Para ello se ingresa el código del departamento y automáticamente, se cambia el valor que tiene el estado de disponibilidad por su valor opuesto y se aumenta en un 12% el precio del alquiler. Utilizar para recorrer forEach 
+5.	Proponer un ejercicio similar al anterior que implique la creación de una array de objetos y permita realizar búsquedas y modificaciones en el mismo
+El profesor de la materia de “Lenguaje de Programación” requiere de un algoritmo que le permita almacenar en un vector los nombres de los 20 estudiantes del curso y en una matriz, las 5 notas obtenidas por cada uno de los estudiantes durante el semestre. El algoritmo debe realizar las siguientes operaciones:
+1.	Determinar la nota definitiva de cada uno de los estudiantes a partir del promedio de las 5 notas obtenidas. Las notas definitivas de los estudiantes deberán ser almacenadas en un arreglo.
+2.	Encontrar el estudiante que obtuvo la mayor nota definitiva.
+3.	Obtener el nombre de los estudiantes (y almacenarlos en un arreglo) que resultaron con la condición de LIBRE en la materia y deberán repetirla. Un estudiante pierde la materia si su nota definitiva es inferior a 6.
+4.	Obtener el nombre de los estudiantes (y almacenarlos en un arreglo) que tendrán que terminaron con la condición de REGULAR en la materia. Un estudiante queda regular si su nota definitiva es inferior a 8 pero superior o igual a 6.
+5.	Determinar cuántos estudiantes PROMOCIONARON la materia.
+6.	Utilizar funciones para cargar el vector de los nombres de los estudiantes y para obtener el promedio.
+
+Modificarlo utilizando un solo array bidimensional con los nombres y las notas de los alumnos y utilizando para recorrer el mismo el método map().
+
