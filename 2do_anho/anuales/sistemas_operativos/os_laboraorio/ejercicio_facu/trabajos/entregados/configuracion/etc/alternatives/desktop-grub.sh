@@ -1,0 +1,1 @@
+/usr/share/grub/themes/kali/grub_background.sh

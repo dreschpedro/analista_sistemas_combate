@@ -1,0 +1,16 @@
+  File: entregados
+  Size: 4096      	Blocks: 8          IO Block: 4096   directory
+Device: 801h/2049d	Inode: 1970561     Links: 4
+Access: (0755/drwxr-xr-x)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2022-09-22 22:33:11.779368272 -0400
+Modify: 2022-09-16 23:21:17.849391718 -0400
+Change: 2022-09-16 23:21:17.849391718 -0400
+ Birth: 2022-09-01 22:40:29.225574659 -0400
+  File: sin_entregar
+  Size: 4096      	Blocks: 8          IO Block: 4096   directory
+Device: 801h/2049d	Inode: 1971927     Links: 2
+Access: (0755/drwxr-xr-x)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2022-09-16 23:21:20.477391718 -0400
+Modify: 2022-09-16 23:21:17.849391718 -0400
+Change: 2022-09-16 23:21:17.849391718 -0400
+ Birth: 2022-09-01 22:40:29.225574659 -0400

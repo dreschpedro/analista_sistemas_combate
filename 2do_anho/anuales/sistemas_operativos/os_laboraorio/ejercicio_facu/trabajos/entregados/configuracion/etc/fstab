@@ -1,0 +1,2 @@
+UUID=12deea7d-2c80-45a6-beb2-e91f0a02ca37	/	ext4	defaults,errors=remount-ro	0	1
+/swapfile none swap defaults 0 0
